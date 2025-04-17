@@ -2,60 +2,72 @@
 
 Submitted by: **Semen Kolesnykov**
 
-**Trivia Game** is an app that presents users with trivia questions of varying categories and difficulties. The app fetches questions from the Open Trivia API and allows users to test their knowledge interactively.
+**Trivia Game** is an interactive SwiftUI app that presents users with trivia questions fetched from the Open Trivia API. Players can test their knowledge by selecting answers and receiving feedback based on their performance.
 
-Time spent: **8** hours spent in total
+Time spent: **8 hours** in total
 
-## Required Features
+---
 
-The following **required** functionality is completed:
+## ✅ Required Features
 
-- [x] App launches to an Options screen where user can modify the types of questions presented when the game starts. Users should be able to choose:
-  - [ ] Number of questions
-  - [ ] Category of questions
-  - [ ] Difficulty of questions
-  - [ ] Type of questions (Multiple Choice or True False)
-- [x] User can tap a button to start trivia game, this presents questions and answers in a List or Card view.
-  - Hint: For Card view visit your FlashCard app. List view is an equivalent to UITableView in UIKit. Much easier to use!
-- [x] Selected choices are marked as user taps their choice (but answered is not presented yet!)
-- [x] User can submit choices and is presented with a score on trivia game
- 
-The following **optional** features are implemented:
+- [x] App launches to an options screen where users can configure trivia settings:
+  - [x] Number of questions
+  - [x] Category of questions
+  - [x] Difficulty of questions
+  - [x] Type of questions (Multiple Choice or True/False)
+- [x] User can start the trivia game and answer a series of questions presented in a card view.
+- [x] Selected choices are visually marked during gameplay.
+- [x] User can submit their answers and view a final score.
 
-- [x] User has answer marked as correct or incorrect after submitting choices (alongside their score).
-- [ ] Implement a timer that puts pressure on the user! Choose any time that works and auto submit choices after the timer expires. 
+---
 
-The following **additional** features are implemented:
+## 🌟 Optional Features
 
-- [x] Used AttributedString and Markdown parsing for displaying formatted trivia text.
-- [x] Dynamic progress bar based on questions completed.
+- [x] User receives feedback per question (correct/incorrect) after submitting.
+- [ ] Countdown timer auto-submits when time runs out.
 
-## Video Walkthrough
+---
 
-Here's a walkthrough of implemented user stories:
+## 💡 Additional Features
 
-> _[Loom video walkthrough will be embedded here after upload]_
+- [x] Formatted question text using `AttributedString` and Markdown.
+- [x] Progress bar reflects current quiz progress.
 
-[Guide](https://www.youtube.com/watch?v=GA92eKlYio4).
+---
 
-## Notes
+## 🎥 App Walkthrough
 
-- Challenges included parsing special characters from the API and properly formatting them using `AttributedString`.
-- Managing state for selected answers and navigation between views required precise bindings.
-- Dealing with edge cases like empty responses or malformed JSON was important for robustness.
+> **Note:** Due to limitations on FIU Green Library iMacs, a full video recording using the simulator was not possible.  
+> I’ve included a GIF demonstration instead, and all screenshots are included in the walkthrough `.docx` for clarity.
 
-## License
+![Trivia Walkthrough](triviaGame.gif)
 
-    Copyright 2025 Semen Kolesnykov
+Full explanation available in:  
+📄 [`TriviaGame_Walkthrough.docx`](TriviaGame_Walkthrough.docx)
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+---
 
-        http://www.apache.org/licenses/LICENSE-2.0
+## 🛠 Notes
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+- API returned escaped characters, which were parsed using `AttributedString`.
+- Managing selection and answer states across views required binding coordination.
+- UI responsiveness was maintained despite large JSON payloads from the trivia API.
+
+---
+
+## 📄 License
+
+```text
+Copyright 2025 Semen Kolesnykov
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
